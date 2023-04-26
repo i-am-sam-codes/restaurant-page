@@ -1,17 +1,9 @@
-function tabElements() {
+function createHome() {
   const contentDiv = document.getElementById("content");
 
-  const firstTab = document.createElement("button");
-  firstTab.textContent = "Home";
+  const homeTab = document.createElement("button");
+  homeTab.textContent = "Home";
 
-  const middleTab = document.createElement("button");
-  middleTab.textContent = "Menu";
-
-  const thirdTab = document.createElement("button");
-  thirdTab.textContent = "Contact";
-
-  contentDiv.appendChild(firstTab);
-  contentDiv.appendChild(middleTab);
-  contentDiv.appendChild(thirdTab);
+  contentDiv.appendChild(homeTab);
 }
-export { tabElements };
+export { createHome };
