@@ -1,6 +1,8 @@
 export default function navBar() {
   const contentDiv = document.getElementById("content");
 
+  const navContainer = document.createElement("div");
+
   const homeTab = document.createElement("button");
   homeTab.textContent = "Home";
   homeTab.classList.add("home");
@@ -29,7 +31,9 @@ export default function navBar() {
     alert("yoooo");
   });
 
-  contentDiv.appendChild(homeTab);
-  contentDiv.appendChild(menuTab);
-  contentDiv.appendChild(contactTab);
+  navContainer.appendChild(homeTab);
+  navContainer.appendChild(menuTab);
+  navContainer.appendChild(contactTab);
+
+  contentDiv.appendChild(navContainer);
 }
