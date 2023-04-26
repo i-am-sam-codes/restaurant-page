@@ -1,10 +1,17 @@
-const firstTab = document.createElement("button");
-firstTab.textContent = "Home";
+function tabElements() {
+  const contentDiv = document.getElementById("content");
 
-const middleTab = document.createElement("button");
-middleTab.textContent = "Menu";
+  const firstTab = document.createElement("button");
+  firstTab.textContent = "Home";
 
-const thirdTab = document.createElement("button");
-thirdTab.textContent = "Contact";
+  const middleTab = document.createElement("button");
+  middleTab.textContent = "Menu";
 
-export { firstTab, middleTab, thirdTab };
+  const thirdTab = document.createElement("button");
+  thirdTab.textContent = "Contact";
+
+  contentDiv.appendChild(firstTab);
+  contentDiv.appendChild(middleTab);
+  contentDiv.appendChild(thirdTab);
+}
+export { tabElements };

@@ -1,12 +1,10 @@
 import title from "./module.js";
-import { firstTab, middleTab, thirdTab } from "./pages/home.js";
+import { tabElements } from "./pages/home.js";
 
 function component() {
   const element = document.createElement("div");
 
-  element.appendChild(firstTab);
-  element.appendChild(middleTab);
-  element.appendChild(thirdTab);
+  document.addEventListener("DOMContentLoaded", tabElements);
 
   element.appendChild(title);
 
