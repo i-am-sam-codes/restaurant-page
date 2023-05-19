@@ -1,13 +1,13 @@
 import nav from "./nav.js";
 import createHome from "./pages/home.js";
+import menuCreate from "./pages/menu.js";
 
 function component() {
+  const contentDiv = document.getElementById("content");
   const element = document.createElement("div");
-
-  document.addEventListener("DOMContentLoaded", nav);
-  document.addEventListener("DOMContentLoaded", createHome);
-
-  return element;
+  // element.setAttribute("id", "page");
+  element.appendChild(createHome());
+  contentDiv.appendChild(element);
 }
 
-document.body.appendChild(component());
+document.body.appendChild(nav(), component());
